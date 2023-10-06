@@ -5,7 +5,7 @@
 
 Tienda con varios items de computacion, separados por categorias y un carrito funcional con form y requerimientos
 
-## Built With
+## Construido con
 
 - ReactJs - Jsx
 
@@ -16,7 +16,7 @@ Tienda con varios items de computacion, separados por categorias y un carrito fu
 **Se arranca con el comando "npm run dev" en la terminal**
 
 
-## Author
+## Autor
 
 👤 **Martin Seoane Posz**
 
@@ -24,17 +24,17 @@ Tienda con varios items de computacion, separados por categorias y un carrito fu
 - Linkedin: [linkedin](https://www.linkedin.com/in/martin-seoane-posz/)
 
 
-## 🤝 Contributing
+## 🤝 Contribuciones
 
 Contributions, issues and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
-## Show your support
+## Mostra tu soporte!
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## Reconocimientos
 
 - Hat tip to anyone whose code was used
 - Inspiration

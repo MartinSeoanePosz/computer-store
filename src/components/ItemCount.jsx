@@ -1,5 +1,9 @@
 import React, { useState, useContext } from "react";
-import { Button, Flex, Text, Box, Spacer } from "@chakra-ui/react";
+import { 
+    Button, 
+    Flex, 
+    Text, 
+    Box } from "@chakra-ui/react";
 import { CartContext } from '../context/CartContext'; 
 
 const ItemCount = ({ item }) => {
@@ -51,8 +55,11 @@ const ItemCount = ({ item }) => {
             >
                 +
             </Button>
-
-            <button onClick={() => addToCart(item, count)}>Agregar al carrito</button>
+            <Button                 
+            colorScheme="green"
+            mr={4}
+            onClick={() => addToCart(item, count)}>Agregar al carrito
+            </Button>
         </Flex>
     );
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Item from './Item';
 import { useParams } from 'react-router-dom';
 import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import '../main.css';
 
 const ItemListContainer = () => {
     const { id: categoryId } = useParams();
@@ -35,7 +36,7 @@ const ItemListContainer = () => {
     }, [categoryId]);
 
     return (
-        <div>
+        <div className="item-container">
             {loading ? (
                 <p>Loading...</p>
             ) : (

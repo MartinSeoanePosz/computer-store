@@ -1,0 +1,9 @@
+.item-container {
+    display: flex; 
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 16px; 
+    margin: 0 -8px;
+}
+
+
