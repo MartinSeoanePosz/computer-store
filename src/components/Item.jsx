@@ -1,4 +1,3 @@
-// src/components/Item.js
 import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Card } from '@chakra-ui/react';
@@ -39,3 +38,5 @@ function Item({ product }) {
 }
 
 export default Item;
+
+

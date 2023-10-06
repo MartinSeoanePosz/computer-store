@@ -26,7 +26,7 @@ function ItemDetail({ product }) {
                         <Text> {product.price}</Text>
                     </CardBody>
                     <CardFooter>
-                        <ItemCount />
+                        <ItemCount item={product}/>
                     </CardFooter>
                 </Card>
             </Center>

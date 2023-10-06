@@ -21,7 +21,6 @@ const App = () => {
 
   return (
     <CartProvider>
-
       <BrowserRouter>
         <div>
           <NavBar />
