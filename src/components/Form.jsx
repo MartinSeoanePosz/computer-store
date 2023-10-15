@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import {
   Box,
   FormControl,
@@ -6,34 +6,37 @@ import {
   Input,
   Button,
 } from '@chakra-ui/react';
+import { collection, addDoc, getFirestore } from 'firebase/firestore';
+import { CartContext } from '../context/CartContext'
 
 const Form = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    lastName: '',
-    phone: '',
-    email: '',
-    address: '',
-  });
+    const cart = useContext(CartContext);
+    const [formData, setFormData] = useState({
+        name: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        address: '',
+    });
+  const [ orderId, setOrderId ] = useState(null);
+  const db = getFirestore();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Confirmacion de transaccion
-    const isConfirmed = window.confirm('Are you sure you want to submit this transaction?');
+    const handleSubmit = (e) => {
+        e.preventDefault();
 
-    if (isConfirmed) {
-      // Confirmado
-      console.log('Transaction confirmed:', formData);
-    } else {
-      // Transaccion cancelada
-      console.log('Transaction canceled');
+        const newOrder = {
+            buyer: formData,
+            items: cart.cart,
+        };
+        addDoc(order, newOrder).then(({ id }) => setOrderId(id));
     }
-  };
+
+    const order = collection(db, 'orders');
 
   return (
     <Box flex={1}>
@@ -92,6 +95,7 @@ const Form = () => {
           Enviar Datos
         </Button>
       </form>
+      <h3>Id de la compra: {orderId}</h3>
     </Box>
   );
 };
