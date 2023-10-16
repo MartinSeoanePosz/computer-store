@@ -2,7 +2,7 @@
 
 > Tienda de items de computacion
 
-!(./src/assets/computer-store.png)
+!![](./src/assets/computer-store.png)
 
 Tienda con varios items de computacion, separados por categorias y un carrito funcional con form y requerimientos
 
