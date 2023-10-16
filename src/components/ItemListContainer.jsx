@@ -20,7 +20,6 @@ const ItemListContainer = () => {
 
                 setDocs(items);
                 setLoading(false);
-                console.log(items);
             } catch (error) {
                 console.error("Error fetching data:", error);
                 setLoading(false);
